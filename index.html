@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Prechu </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="wrapper">
+			<a class="logo" href="#"></a>
+			<div class="navbar">
+				<a class="nav_button" href="#"> Home </a>
+				<a class="nav_button" href="#"> Products </a>
+				<a class="nav_button" href="#"> Services </a>
+				<a class="nav_button" href="#"> Contact </a>
+			</div>
+		</div>
+	</div>
+	<div class='banner'>
+  	<div class="frame" id="frame">
+        <ul class="slidee">
+          <li class="slidee-item">
+             <div class="wrapper">
+                <div class='banner_image'>
+                  <img src="banner_phone.png" alt="картинка с телефоном">
+                </div>
+                <div class="banner_text">
+                  <div class="banner_title">
+                  Lorem ipsum is simply
+                  </div>
+                  <p> dummy text of the <br> printing &amp; typesetting  </p>
+                  <div class="banner_button">
+                    <a href='#' class="button">
+                      Sign up now
+                    </a>
+                  </div>
+                </div>    
+              </div>
+            </li>
+          <li class="slidee-item">
+            <div class="wrapper">
+                <div class='banner_image'>
+                  <img src="banner_phone.png" alt="картинка с телефоном">
+                </div>
+                <div class="banner_text">
+                  <div class="banner_title">
+                  Lorem ipsum is simply
+                  </div>
+                  <p> dummy text of the <br> printing &amp; typesetting  </p>
+                  <div class="banner_button">
+                    <a href='#' class="button">
+                      Sign up now
+                    </a>
+                  </div>
+                </div>    
+              </div>
+          </li>
+          <li class="slidee-item">
+            <div class="wrapper">
+                <div class='banner_image'>
+                  <img src="banner_phone.png" alt="картинка с телефоном">
+                </div>
+                <div class="banner_text">
+                  <div class="banner_title">
+                  Lorem ipsum is simply
+                  </div>
+                  <p> dummy text of the <br> printing &amp; typesetting  </p>
+                  <div class="banner_button">
+                    <a href='#' class="button">
+                      Sign up now
+                    </a>
+                  </div>
+                </div>    
+              </div>
+          </li>
+        </ul>
+      </div>
+      <div class="gallery-prev"></div>
+      <div class="gallery-next"></div>
+    </div>  
+    <div class='bubble_container'>
+    <div class="wrapper">
+      <a href='#' class='bubble'>
+        <div class="bubble_image bubble_image_1">
+        </div>
+        <div class="bubble_title">
+        Contrary to popular
+        </div>
+        <div class="bubble_text"> Lorem ipsum is not simply random text <br> it has roots in piece </div> 
+      </a><a href='#' class='bubble'>
+        <div class="bubble_image bubble_image_2">
+        </div>
+        <div class="bubble_title">
+        Contrary to popular
+        </div>
+        <div class="bubble_text"> Lorem ipsum is not simply random text <br> it has roots in piece </div> 
+      </a><a href='#' class='bubble'>
+        <div class="bubble_image bubble_image_3">
+        </div>
+        <div class="bubble_title">
+        Contrary to popular
+        </div>
+        <div class="bubble_text"> Lorem ipsum is not simply random text <br> it has roots in piece </div> 
+      </a>
+    </div>
+    </div>
+	<div class="shopping_cart">
+   <div class="wrapper">
+    <div class="shopping_cart_title">
+    The Shopping cart
+    </div>
+    <div class="shopping_cart_image">
+    </div>
+    <div class="shopping_cart_text_title">
+    Some Bullet text here
+    </div>
+    <div class="shopping_cart_text">
+    Lorem Ipsum is simply dummy text of the printing and typesetting<br> 
+    Lorem Ipsum has been the industry's standard dummy text ever<br> 
+    When an unknown printer took a galley of type and scrambled<br> 
+    It to make a type specimen book. It has survived not only five centuries<br>
+    But also the leap into electronic typesetting,<br>
+    Remaining essentially unchanged. It was popularised<br> 
+    The release of Letraset sheets containing Lorem Ipsum passages
+    </div>  
+   </div>
+  </div>
+  <div class="footer-fake"> </div>
+	<div class="footer"> 
+		<div class="wrapper">
+			<div class="footer-container"><div class="footer-content">Copyright &copy; 2012-2013 <a href="#">cssauthor.com</a></div></div>
+		</div>
+	</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="sly.js"></script>
+<script>
+  $( document ).ready( function() {
+    var width = $('.banner').width();
+    $('.slidee-item').each(function() {
+      $(this).width(width);
+    });
+
+    
+    var $frame = $('#frame');
+    var $wrap  = $frame.parent();
+
+    // Call Sly on frame
+    $('#frame').sly({
+      horizontal: 1,
+      itemNav: 'forceCentered',
+      smart: 1,
+      activateMiddle: 1,
+      mouseDragging: 1,
+      //touchDragging: 1,
+      releaseSwing: 1,
+      startAt: 0,
+      scrollBy: 1,
+      speed: 300,
+      elasticBounds: 1,
+      dragHandle: 1,
+      scrollSource: null,
+      //dynamicHandle: 1,
+      clickBar: 1,
+      cycleBy:       'items',  // Enable automatic cycling by 'items' or 'pages'.
+      cycleInterval: 5000,  // Delay between cycles in milliseconds.
+      pauseOnHover:  false, // Pause cycling when mouse hovers over the FRAME.
+      startPaused:   false, 
+
+      // Buttons
+      prev: $wrap.find('.gallery-prev'),
+      next: $wrap.find('.gallery-next')
+    });
+  })
+</script>
+</body>
+</html>
